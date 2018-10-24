@@ -3,8 +3,8 @@ const app = express();
 
 app.use((req,res,next) => {
 	res.status(200).json({
-		message: 'It Works'
+		message: 'It Works!'
 	})
 })
 
-module exports = app
+module.exports = app
