@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
-
+// handling orders request
 router.get('/', (req, res, next) => {
 	res.status(200).json({
 		message: 'GET requests /orders'
