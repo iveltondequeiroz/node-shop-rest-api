@@ -3,9 +3,28 @@ const app = express()
 
 const logger = require('morgan')
 const bodyParser = require('body-parser')
+//const mongoose = require('mongoose')
+
+
+/*var MongoClient = require('mongodb').MongoClient
+var uri = 'mongodb+srv://ivelton:'+process.env.MONGO_ATLAS_WP+"@cluster0.mongodb.net/test";
+MongoClient.connect(uri, function(err, client) {
+   const collection = client.db("test").collection("devices");
+   console.log('mongo connected')
+   // perform actions on the collection object
+   client.close();
+});
+*/
 
 const productRoutes = require('./api/routes/products')
 const ordersRoutes = require('./api/routes/orders')
+
+// starting db
+//var uri = 'mongodb+srv://ivelton:'+process.env.MONGO_ATLAS_WP+"@cluster0.mongodb.net/test";
+//mongoose.connect(uri, {useMongoClient:true})
+
+console.log("process.env.MONGO_ATLAS_DB", process.env.MONGO_ATLAS_DB)
+console.log("process.env.MONGO_ATLAS_PW", process.env.MONGO_ATLAS_PW)
 
 // middlewares
 app.use(logger('dev'))

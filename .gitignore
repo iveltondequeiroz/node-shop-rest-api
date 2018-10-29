@@ -3,6 +3,9 @@
 # dependencies
 /node_modules
 
+# nodemon config
+nodemon.json
+
 # testing
 /coverage
 
