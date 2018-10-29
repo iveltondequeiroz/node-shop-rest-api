@@ -12,6 +12,20 @@ app.use(logger('dev'))
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
+// CORS
+app.use((req, res, next) => {
+	req.header('Access-Control-Allow-Origin', '*')
+	req.header(
+		'Access-Control-Allow-Headers', 
+		'Origin, X-Requested-With, Content-type, Accept, Authorization' 
+	)
+	if(req.method === 'OPTIONS') {
+		res.header('Access-Control-Allow-Methods', 'PUT, POST, PATCH, DELETE, GET')
+		return res.setStatus(200).json({})
+	}
+	next();
+})
+
 // routes
 app.use('/products', productRoutes)
 app.use('/orders', ordersRoutes)
