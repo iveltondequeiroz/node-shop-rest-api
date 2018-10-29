@@ -5,6 +5,7 @@
 
 # nodemon config
 nodemon.json
+temp.txt
 
 # testing
 /coverage

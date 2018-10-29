@@ -11,8 +11,8 @@ const productRoutes = require('./api/routes/products')
 const ordersRoutes = require('./api/routes/orders')
 
 // starting db
-//var uri = 'mongodb+srv://ivelton:'+process.env.MONGO_ATLAS_WP+"@cluster0.mongodb.net/test";
-//mongoose.connect(uri, {useMongoClient:true})
+var uri = 'mongodb+srv://ivelton:'+process.env.MONGO_ATLAS_WP+"@cluster0.mongodb.net/test";
+mongoose.connect(uri, {useMongoClient:true})
 
 console.log("process.env.MONGO_ATLAS_DB", process.env.MONGO_ATLAS_DB)
 console.log("process.env.MONGO_ATLAS_PW", process.env.MONGO_ATLAS_PW)
