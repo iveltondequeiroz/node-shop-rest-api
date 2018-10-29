@@ -1,3 +1,0 @@
-temp.txt
-
-mongodb+srv://ivelton:<PASSWORD>@node-rest-api-qn8qv.mongodb.net/test?retryWrites=true

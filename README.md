@@ -2,4 +2,5 @@
 
 - Node
 - Express
-- Mongodb
+- MongoDB / Mongoose
+- Morgan
