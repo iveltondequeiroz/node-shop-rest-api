@@ -9,13 +9,14 @@ const mongoose = require('mongoose')
 
 const productRoutes = require('./api/routes/products')
 const ordersRoutes = require('./api/routes/orders')
+// mongodb+srv://ivelton:<PASSWORD>@node-rest-api-qn8qv.mongodb.net/test?retryWrites=true
 
 // starting db
-var uri = 'mongodb+srv://ivelton:'+process.env.MONGO_ATLAS_WP+"@cluster0.mongodb.net/test";
-mongoose.connect(uri, {useMongoClient:true})
+var uri = 'mongodb+srv://ivelton:ivelton@node-rest-api-qn8qv.mongodb.net/test?retryWrites=true'
+mongoose.connect(uri, { useNewUrlParser: true })
 
-console.log("process.env.MONGO_ATLAS_DB", process.env.MONGO_ATLAS_DB)
-console.log("process.env.MONGO_ATLAS_PW", process.env.MONGO_ATLAS_PW)
+//console.log("process.env.MONGO_ATLAS_DB", process.env.MONGO_ATLAS_DB)
+//console.log("process.env.MONGO_ATLAS_PW", process.env.MONGO_ATLAS_PW)
 
 // middlewares
 app.use(logger('dev'))
